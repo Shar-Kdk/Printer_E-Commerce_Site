@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIC_Mart</title>
+    <link rel="stylesheet" href="../Style_css/style1.css" />
+  </head>
+
+  <body style="background-color: rgba(211, 211, 211, 0.39); overflow-x: hidden">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="../Assets/index_pic/front.png" width="120px"
+          /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems"><b>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="about.html">About_us</a></li>
+            <li><a href="contactUs.html">Contact_us</a></li>
+        </b>
+    </ul>
+        </nav>
+        <a href="shoppingcart.html">
+          <img
+            src="../Assets/index_pic/caart.png"
+            width="30px"
+            height="30px"
+            class="cartimg"
+        /></a>
+        <img
+          src="C:\Users\hemra\Downloads\Blue Hamburger Menu.png"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
+      </div>
+    </div>
+    <!--Research-->
+
+    <div style=" 
+          background-image: url(../Assets/research_pic/banner.jpg);
+          width: 100;
+          padding: 50px 0;
+        ">
+        <h1  style="color: white; display: flex; align-items: center; justify-content: center; ">IIC_Mart</h1>
+      </div> </br>
+
+    <div class="ref-m">
+      <div
+        style="
+          background-color: lightpink;
+          margin-bottom: 10px;
+          font-size: 25px;
+        "
+      >
+        <a href="https://www.usareads.org/blog/"
+          >Contact form : The contact form of my website was taken as reference
+          from usareads.org, but I've made many changes on it.</a
+        >
+      </div>
+      <div class="ref">
+        <img class="ref-img" style="width: 500px; height: 700px;" src="../Assets/research_pic/blogp.png" />
+        <img class="ref-img" style="width: 800px; height: 700px;" src="../Assets/research_pic/myblogp.png" />
+      </div>
+
+      <div
+        style="
+          background-color: lightpink;
+          margin-bottom: 10px;
+          font-size: 25px;
+        "
+      >
+        <a href="https://www.usareads.org/"
+          >Nav Bar : The navigation bar of my website was taken as reference
+          from usareads.org</a
+        >
+      </div>
+      <div class="ref">
+        <img class="ref-anav-img" src="../Assets/research_pic/navp.png" />
+        <img class="ref-nav-img" src="../Assets/research_pic/mynavp.png" />
+      </div>
+
+      <div
+        style="
+          background-color: lightpink;
+          margin-bottom: 10px;
+          font-size: 25px;
+        "
+      >
+        <a href="https://dashboard.sleeknote.com/login"
+          >Log In : The login page of my website was taken as reference from
+          dashboard.sleeknote.com</a
+        >
+      </div>
+      <div class="ref">
+        <img class="ref-img" src="../Assets/research_pic/loginp.png" />
+        <img class="ref-img" src="../Assets/research_pic/myloginp.png" />
+      </div>
+    </div>
+
+    
+
+    <!--Footer-->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for Android and ios mobile phone.</p>
+            <div class="app-logo">
+              <img
+                src="../Assets/index_pic/gp.png"
+                width="220px"
+                height="100px"
+              />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img
+              src="../Assets/index_pic/front.png"
+              width="80px"
+              height="150px"
+            />
+            <p>
+              Our Purpose is to Sustainably make the pleasure and benefits of
+              Services Accessible to many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+              <a href=""></a>
+              <li>Coupons</li>
+              <li>Blog Post</li>
+              <li>Join Affiliate</li>
+              <li>Return Policy</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+              <li>Youtube</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="Copyright">Copyright 2020 - IICMart</p>
+      </div>
+    </div>
+    <!--Js for toggle-->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

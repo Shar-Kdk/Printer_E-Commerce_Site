@@ -1,0 +1,173 @@
+/* Main container styling */
+.about-container {
+  font-family: Tahoma, sans-serif;
+  min-height: 75vh;
+  background-image: url("col-12 col-sm-6 col-md-4 col-lg-3");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Team member card styling */
+.our-team {
+  padding: 5px 20px;
+  margin: 15px;
+  height: 56vh;
+  background-color: #f7f5ec;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+
+  .about-team {
+    background-color: #ebe5cc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.our-team:hover {
+  transform: translateY(-1px);
+}
+
+/* Picture styling */
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  position: relative;
+}
+
+.our-team .picture::before,
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+.our-team .picture::before {
+  height: 0;
+  bottom: 135%;
+  opacity: 0.9;
+  transform: scale(3);
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+/* Title styling */
+.our-team .name {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.our-team .title {
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+/* Social icons styling */
+.our-team .social {
+  align-content: center;
+  width: 70%;
+  height: 5vh;
+  padding: 0;
+  margin-left: 40px;
+  border: 1px solid #36414e;
+  border-radius: 10px;
+  background-color: #3967a0;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #36414e;
+}
+
+/* Section styling */
+.about-us {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.about-us h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}

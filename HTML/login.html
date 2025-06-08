@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIC_Mart</title>
+    <link rel="stylesheet" href="../Style_css/style1.css">
+</head>
+
+<body style="background-color: rgba(211, 211, 211, 0.39);">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../Assets/index_pic/front.png" width="120px"></a></div>
+            <nav>
+                <ul id="MenuItems"><b>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html">About_us</a></li>
+                    <li><a href="contactUs.html">Contact_us</a></li>
+                </b></ul>
+            </nav>
+            <a href="shoppingcart.html">
+                <img src="../Assets/index_pic/caart.png" width="30px" height="30px" class="cartimg"></a>
+        </div>
+    </div>
+
+    <!-- Login Page-->
+    <div class="login-page">
+        <div class="container">
+            <div class="row">
+                <div class="col2">
+                    <img src="../Assets/Login_pic/print2.png" width="100%" height="300px">
+                </div>
+                <div class="col2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginform">
+                            <input type="text" id="loginUsername" required placeholder="Username">
+                            <input type="password" id="loginPassword" required placeholder="Password">
+                            <button type="button" class="btn" onclick="validateLogin()"> Login </button>
+                            <a href="">Forgot password</a>
+                        </form>
+                        <form id="regform">
+                            <input type="text" id="regUsername" placeholder="Username" required>
+                            <input type="email" id="regEmail" placeholder="e-mail" required>
+                            <input type="password" id="regPassword" placeholder="Password" required>
+                            <button type="button" class="btn" onclick="validateRegister()"> Register </button>
+                            <a href="">Forgot password</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="../Assets/index_pic/gp.png" width="220px" height="100px">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../Assets/index_pic/front.png" width="80px" height="150px">
+                    <p>Our Purpose is to Sustainably make the pleasure and benefits of Services Accessible to many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul><a href=""></a>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Join Affiliate</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - IICMart</p>
+        </div>
+    </div>
+
+    <!-- Js for toggle-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+        var loginform = document.getElementById("loginform");
+        var regform = document.getElementById("regform");
+        var indicator = document.getElementById("indicator");
+
+        function register() {
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+        function validateLogin() {
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+
+            var storedPassword = localStorage.getItem(username);
+
+            if (username === "" || password === "") {
+                alert('Please enter a valid username and password.');
+            } else if (storedPassword === null) {
+                alert('Username not found.');
+            } else if (storedPassword !== password) {
+                alert('Incorrect password.');
+            } else {
+                alert('Login successful. Welcome, ' + username + '!');
+                window.location.href = 'index.html'; // Redirect to index.html
+            }
+        }
+
+        function validateRegister() {
+            var username = document.getElementById('regUsername').value;
+            var email = document.getElementById('regEmail').value;
+            var password = document.getElementById('regPassword').value;
+
+            // Simple email validation
+            if (username === "" || email === "" || password === "") {
+                alert('Please fill out all fields.');
+            } else if (!document.getElementById('regEmail').checkValidity()) {
+                alert('Please provide a valid email address.');
+            } else {
+                localStorage.setItem(username, password);
+                alert("Registration successful. You can now log in.");
+                login();
+            }
+        }
+    </script>
+</body>
+</html>

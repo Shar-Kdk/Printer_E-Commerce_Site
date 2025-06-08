@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IIC_Mart</title>
+    <link rel="stylesheet" href="../Style_css/style1.css">
+</head>
+
+<body style="background-color: rgba(211, 211, 211, 0.39);">
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../Assets/index_pic/front.png" width="120px"></a>
+
+            </div>
+            <nav>
+                <ul id="MenuItemsz"><b>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html">About_us</a></li>
+                    <li><a href="contactUs.html">Contact_us</a></li>
+                </b>
+            </ul>
+            </nav>
+            <img src="../Assets/index_pic/caart.png" width="30px" height="30px" class="cartimg">
+        </div>
+
+    </div>
+
+<!--cart items--> 
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <td>
+            <div class="cart-info">
+                <img src="../Assets/Shoppingacart_pic/mon1.png">
+                <div>
+                    <p>Gaming monitor</p>
+                    <small>Price: Rs. 25000</small><br>
+                    <a href="">Remove</a>
+
+                </div>
+
+            </div>
+        </td>
+        <tr>
+            <td>Product Name</td>
+            <td><input type="number" value="1"></td>
+            <td>Rs. 20000</td>
+        </tr>
+
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <td>
+            <div class="cart-info">
+                <img src="../Assets/Shoppingacart_pic/mon1.png">
+                <div>
+                    <p>Gaming monitor</p>
+                    <small>Price: Rs. 25000</small><br>
+                    <a href="">Remove</a>
+
+                </div>
+
+            </div>
+        </td>
+        <tr>
+            <td>Product Name</td>
+            <td><input type="number" value="1"></td>
+            <td>Rs. 20000</td>
+        </tr>
+
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <td>
+            <div class="cart-info">
+                <img src="../Assets/Shoppingacart_pic/mon1.png">
+                <div>
+                    <p>Gaming monitor</p>
+                    <small>Price: Rs. 25000</small><br>
+                    <a href="">Remove</a>
+
+                </div>
+
+            </div>
+        </td>
+        <tr>
+            <td>Product Name</td>
+            <td><input type="number" value="1"></td>
+            <td>Rs. 20000</td>
+        </tr>
+    </table>
+
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>Rs. 25000</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>Rs. 5000</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>Rs. 30000</td>
+            </tr>
+        </table>
+    </div>
+    <div><a href="index.html" style="margin-left: 920px;" class="btn">Checkout</a></div>
+</div>  
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="../Assets/index_pic/gp.png" width="220px" height="100px">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../Assets/index_pic/front.png" width="80px" height="150px">
+                    <p>Our Purpose is to Sustainably make the pleasure and benefits of Services Accessible to many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul><a href=""></a>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Join Affiliate</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - IICMart</p>
+        </div>
+    </div>
+
+    <!--Js for toggle-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        } 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIC_Mart</title>
+    <link rel="stylesheet" href="../Style_css/style1.css">
+</head>
+
+<body style="background-color: rgba(211, 211, 211, 0.39);">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../Assets/index_pic/front.png" width="120px" alt="Logo">
+                    </a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="about.html">About_us</a></li>
+                        <li><a href="contactUs.html">Contact_us</a></li>
+                    </ul>
+                </nav>
+                <a href="shoppingcart.html">
+                    <img src="../Assets/index_pic/caart.png" width="30px" height="30px" class="cartimg" alt="Cart">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- blog Page -->
+    <div class="research">
+        <div class="research-content">
+            <section style="margin: 60px">
+                <h1>Impact of Technology</h1>
+                <img src="../Assets/blog_pic/ImpactofTechnology.png" style="height: 25vh; margin-top: 30px; margin-bottom: 30px" alt="Impact of Technology">
+                <p>Exploring the transformative effects of technology on daily life and business.</p>
+            </section>
+        </div>
+
+        <div class="research-content">
+            <section style="margin: 60px">
+                <h2>Technology in Daily Life</h2>
+                <img src="../Assets/blog_pic/technologyindailylife.jpg" style="height: 25vh; margin: 30px 0" alt="Technology in Daily Life">
+                <p>Modern technology has significantly impacted our daily lives. Here are a few examples:</p>
+                <ul>
+                    <li>Smartphones for communication and information access</li>
+                    <li>Smart home devices for automation and convenience</li>
+                    <li>Social media for networking and staying connected</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="research-content">
+            <section style="margin: 60px">
+                <h2>Technology in Business</h2>
+                <img src="../Assets/blog_pic/business.jpg" style="height: 25vh; margin: 30px 0" alt="Technology in Business">
+                <p>Businesses have transformed with the integration of technology. Key impacts include:</p>
+                <ul>
+                    <li>Automation of repetitive tasks for increased efficiency</li>
+                    <li>Data analytics for informed decision-making</li>
+                    <li>E-commerce for global reach and online transactions</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="research-content">
+            <section style="margin: 60px">
+                <h2>Future Trends</h2>
+                <img src="../Assets/blog_pic/trends.png" style="height: 25vh; margin: 30px 0" alt="Future Trends">
+                <p>The continuous evolution of technology promises exciting future trends such as:</p>
+                <ul>
+                    <li>Artificial Intelligence (AI) for advanced automation and machine learning</li>
+                    <li>Internet of Things (IoT) for interconnected devices</li>
+                    <li>Augmented Reality (AR) and Virtual Reality (VR) for immersive experiences</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phones.</p>
+                    <div class="app-logo">
+                        <img src="../Assets/index_pic/gp.png" width="220px" height="100px" alt="Download Our App">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../Assets/index_pic/front.png" width="80px" height="150px" alt="Footer Logo">
+                    <p>Our Purpose is to Sustainably make the pleasure and benefits of Services Accessible to many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2020 - IICMart</p>
+        </div>
+    </div>
+
+    <!-- Js for toggle -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight === "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+        var loginform = document.getElementById("loginform");
+        var regform = document.getElementById("regform");
+        var indicator = document.getElementById("indicator");
+
+        function register() {
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+</body>
+
+</html>
